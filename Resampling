@@ -1,4 +1,4 @@
-# ch8_bootstrap.py
+
 import numpy as np
 
 def bootstrap_mean(data, n_boot=1000):
