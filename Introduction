@@ -1,0 +1,12 @@
+
+def main():
+    print("Statistical Computing — Chapter 1: Introduction")
+    a = 10           # integer
+    b = 3.14         # float
+    c = "hello"      # string
+    d = [1,2,3]      # list
+    print(type(a), type(b), type(c), type(d))
+    print("Sum a + b =", a + b)
+
+if __name__ == "__main__":
+    main()

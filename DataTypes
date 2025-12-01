@@ -1,0 +1,30 @@
+
+import csv
+import json
+import pandas as pd
+
+def make_sample_csv(path="sample.csv"):
+    rows = [["id","name","score"], [1,"Alice",85], [2,"Bob",92]]
+    with open(path, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerows(rows)
+    print(f"Wrote {path}")
+
+def read_write_json():
+    data = {"students": [{"id":1,"name":"Alice"}, {"id":2,"name":"Bob"}]}
+    with open("students.json", "w") as f:
+        json.dump(data, f, indent=2)
+    with open("students.json") as f:
+        read = json.load(f)
+    print("JSON read:", read)
+
+def pandas_demo():
+    df = pd.DataFrame({"x":[1,2,3], "y":[2.0,3.5,4.1]})
+    df.to_csv("df_sample.csv", index=False)
+    df2 = pd.read_csv("df_sample.csv")
+    print(df2)
+
+if __name__ == "__main__":
+    make_sample_csv()
+    read_write_json()
+    pandas_demo()
